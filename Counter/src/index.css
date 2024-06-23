@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body
+{
+    background-color: rgb(0, 0, 23);
+}
+.form
+{
+    height: 520px;
+    width: 430px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 2px solid white;
+    
+}
+.block {
+	position: relative;
+	margin: 80px auto 0;
+	width: 500px;
+	height: 550px;
+	background: linear-gradient(0deg, #000, #272727);
+}
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+.box{
+  padding: 70px 20px;
+}
+.shape1
+{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to left,orange,orange,white,white,green,green);
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    top: 0%;
+}
+.shape2
+{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to right,orange,orange,white,white,green,green);
+    border-radius: 50%;
+    position: absolute;
+    left: 57%;
+    top: 70%;
+}
+button{
+  font-weight: 600;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s all ease-in-out;
+}
+button:hover{
+  background-color: white;
+  color: black;
+  transition: 0.3s all ease-in-out;
+}
+
+.h1
+{
+    font-size: 25px;
+    background: linear-gradient(to right, skyblue 20%, rgb(255, 167, 255) 45%, rgb(255, 179, 192) 53%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: light;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 75%;
+    }
+    50%{
+        background-position: 100% 30%;
+    }
+    100%{
+        background-position: 0% 70%;
+    }
+}
