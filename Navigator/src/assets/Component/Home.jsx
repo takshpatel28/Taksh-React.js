@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div style={{margin:"15%"}}>
+      <h1>Welcome to Home Page</h1>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Product = () => {
     const [data,setdata]=useState([])
@@ -27,7 +27,7 @@ const Product = () => {
         {data.map((el)=>(
             <div key={el.id} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",margin:"10px 20px",height:"420px",padding:"25px 0"}}>
                 <h3>{el.category}</h3>
-                <img src={el.image} alt="" height={250} width={250}/>
+             <Link to={`/singlepage/${el.id}`}><img src={el.image} alt="" height={250} width={250}/></Link>
                 <h3>{el.price}</h3>
                 <h4>{el.title}</h4>
             </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
+    <div style={{margin:"15%"}}>
+      <h1>Welcome to About Page</h1>
     </div>
   )
 }
