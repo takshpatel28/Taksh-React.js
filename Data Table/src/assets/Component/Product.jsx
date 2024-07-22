@@ -9,7 +9,7 @@ const Product = () => {
     const [categoryOption, setCategoryOption] = useState(null);
     const [order, setOrder] = useState(null);
     const [search, setSearch] = useState('');
-    const debouncedSearch = useDebounce(search, 1000); // Delay of 500ms
+    const debouncedSearch = useDebounce(search, 1700); // Delay of 500ms
 
     const getDataFunction = () => {
         axios.get('http://localhost:3000/product', {
@@ -110,7 +110,7 @@ const Product = () => {
                 <span style={{ fontSize: "20px", fontWeight: "600" }}> {page} </span>
                 <button 
                     style={{ fontWeight: "600", padding: '10px 20px', borderRadius: '5px', border: 'none', backgroundColor: '#2196F3', color: 'white', cursor: 'pointer', marginLeft: '10px' }}
-                    disabled={page === 4}
+                    disabled={page === 6}
                     onClick={() => setPage(page + 1)}>
                     Next
                 </button>

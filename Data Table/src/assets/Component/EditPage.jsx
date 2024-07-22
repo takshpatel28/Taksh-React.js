@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 
 const EditPage = () => {
     const { id } = useParams()
-
     const [formdata, setformdata] = useState({
         title: "",
         description: "",
