@@ -1,6 +1,6 @@
 import './App.css'
-import AllRouter from './assets/Component/AllRouter'
-import Navbar from './assets/Component/Navbar'
+import AllRouter from './Component/AllRouter'
+import Navbar from './Component/Navbar'
 
 function App() {
 
