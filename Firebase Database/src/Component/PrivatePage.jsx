@@ -1,31 +1,16 @@
 import React from 'react'
-import Swal from "sweetalert2";
-
+import { Navigate } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../Service/Firebase';
 
 const PrivatePage = ({children}) => {
-    const isAuth=localStorage.getItem("token")
+    const [user] = useAuthState(auth);
 
-    const Alert = () => {
-        Swal.fire({
-          title: "You Can't Enter In This Page",
-          text: "Please Login Your Account",
-          icon: "error",
-          confirmButtonText: "Okay",
-          confirmButtonColor: "rgb(248, 103, 103)"
-
-        }).then(function () {
-          window.location.href = "/login";
-        });
-      };
-    
-    
-    if(!isAuth){
-        // alert("You are not login your Account")
-        Alert()
-        // window.location.href="/login"
-    }else{
-      return children
+    if(!user){
+      alert("You can't enter in this page. Please Login Your Account")
+      return <Navigate to={"/login"} />
     }
+  return children
 }
 
 export default PrivatePage

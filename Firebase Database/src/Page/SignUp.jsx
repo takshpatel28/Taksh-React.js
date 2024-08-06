@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { auth } from '../Service/Firebase';
+import { Link } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -48,7 +49,7 @@ const SignUp = () => {
         <br /><br />
         <input type="submit" className="submit-btn" />
         <p className="login-link">
-          Already have an account? <a href="/login">Login here</a>
+          Already have an account? <Link to={"/login"}>Login here</Link>
         </p>
       </form>
     </div>
